@@ -3,7 +3,10 @@ package com.kodlakodlat.userservice.controller;
 import com.kodlakodlat.userservice.model.UserModel;
 import com.kodlakodlat.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -20,7 +23,6 @@ public class UserControllers {
         return userModel;
     }
 
-    @GetMapping("/getallusers")
     public List<UserModel> getAllUser(){
         return userService.getAllUser();
     }
